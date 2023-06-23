@@ -1,4 +1,4 @@
-IP: 84.201.138.218
+IP: 84.201.138.218;
 name_taski: https://taskboarding.ddns.net/;
 name_kittygram: https://kittgram.ddns.net/;
 login: admin;

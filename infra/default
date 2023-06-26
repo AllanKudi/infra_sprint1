@@ -1,14 +1,10 @@
 server {
     server_name 84.201.138.218 kittgram.ddns.net;
 
-    location /api/ {
+    location ~ ^/(api|admin) {
         proxy_pass http://127.0.0.1:8080;
     }
 
-    location /admin/ {
-        proxy_pass http://127.0.0.1:8080;
-    }
-    
     location /media/ {
         alias /var/www/infra_sprint1/media/;
     }
@@ -32,11 +28,7 @@ server {
 server {
     server_name 84.201.138.218 taskboarding.ddns.net;
 
-    location /api/ {
-        proxy_pass http://127.0.0.1:8000;
-    }
-
-    location /admin/ {
+    location ~ ^/(api|admin) {
         proxy_pass http://127.0.0.1:8000;
     }
 
